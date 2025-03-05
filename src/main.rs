@@ -5,7 +5,7 @@ use std::io::{BufRead, BufReader};
 use std::process::Command;
 
 fn main() {
-    let status = Command::new("pkill").arg("swayidle").status();
+    let status = Command::new("pkill").arg("-x").arg("swayidle").status();
 
     let sway_idle_command = get_command_from_config();
 
@@ -86,7 +86,7 @@ fn notify(status: bool) {
         .summary(&summary)
         .body(&body)
         .icon("dialog-information")
-        .appname("sway-idle-switch")
+        .appname("swayidle-switch")
         .hint(Hint::Category("Device".to_owned()))
         .timeout(Timeout::Milliseconds(10000))
         .show()
