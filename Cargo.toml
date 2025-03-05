@@ -7,3 +7,9 @@ edition = "2021"
 
 [dependencies]
 notify-rust = "4.11.5"
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"  # or "s" for smaller code size
+lto = "thin"
+panic = "abort"
