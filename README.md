@@ -15,6 +15,17 @@ exec swayidle -w \
 #! SWAYIDLE END !#
 ```
 
+## Installation
+### Dependencies
+- Mako (notifications)
+- Rust
+
+### Arch Linux
+To install this script on Arch Linux, you can visit [this project](https://github.com/jefrecantuledesma/pkgbuilds/tree/main/swayidle-switch), download the PKGBUILD, issue `makepkg -si`, and enjoy!
+
+### Other Distributions
+TO install this script on other distributions, you can issue `git clone https://github.com/jefrecantuledesma/swayidle-switch`, enter the cloned directory, issue `cargo build --release`, enter the `./target/release` directory, and move the binary to `/usr/bin` or wherever is deemed appropriate.
+
 ## Use
 Either run `swayidle-switch` from your terminal, or, as I find to be much more convenient, bind `swayidle-switch` to a hotkey, like so:
 ```
@@ -22,3 +33,6 @@ bindsym $mod+Shift+t exec swayidle-switch
 ```
 
 Either will work though!
+
+# WARNING
+I am a terrible programmer! Please back up your Sway configuration. **This script has deleted half of my configuration once in a previous iteration.**
